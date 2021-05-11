@@ -60,6 +60,6 @@ jobs:
       # Cygwin executables are added to PATH, so you can call them directly:
       - run: |
           ./build.sh setup C:/tools/cygwin/setup.exe
-          shell:./build.sh bdist
+          ./build.sh bdist
       
           
