@@ -34,7 +34,13 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project. 
-
+          
+      - name: Setup Java JDK
+        uses: actions/setup-java@v2.0.0
+        with:
+          distribution: 'adopt' # See 'Supported distributions' for available options
+          java-version: '11'
+          
       - name: Install Cygwin
         # You may pin to the exact commit or the version.
         # uses: egor-tensin/setup-cygwin@4f96f9fecb8c952fa32ff791b0a77d93d5191bb4
@@ -50,11 +56,10 @@ jobs:
           #env: # optional
           # Convert symlinks in /usr/bin to hardlinks
           #hardlinks: # optional, default is 0
-          
-      - name: Setup Java JDK
-        uses: actions/setup-java@v2.0.0
-        with:
-          distribution: 'adopt' # See 'Supported distributions' for available options
-          java-version: '11'
+ 
+      # Cygwin executables are added to PATH, so you can call them directly:
+      - run: |
+          ./build.sh setup C:/tools/cygwin/setup.exe
+          shell:./build.sh bdist
       
           
