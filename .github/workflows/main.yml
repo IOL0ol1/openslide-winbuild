@@ -51,7 +51,7 @@ jobs:
           # Installation directory
           install-dir: C:\tools\cygwin  # optional, default is C:\tools\cygwin
           # Packages to install, separated by a space
-          packages: wget zip pkg-config make cmake mingw64-i686-gcc-g++ mingw64-x86_64-gcc-g++ binutils nasm gettext-devel libglib2.0-devel # optional
+          packages: wget zip pkg-config make cmake mingw64-i686-gcc-g++ mingw64-x86_64-gcc-g++ binutils nasm gettext-devel libglib2.0-devel openssl # optional
           # Value to set as the CYGWIN environment variable
           #env: # optional
           # Convert symlinks in /usr/bin to hardlinks
