@@ -58,8 +58,7 @@ jobs:
           #hardlinks: # optional, default is 0
  
       # Cygwin executables are added to PATH, so you can call them directly:
-      - run: |
-          ./build.sh setup C:/tools/cygwin/setup.exe
-          ./build.sh bdist
+      - run: | 
+          bash ./build.sh bdist
       
           
